@@ -120,16 +120,16 @@ const Contact = () => {
         <motion.div
           className="contactInputContainer"
           variants={variants}
-          initial={{ opacity: 0, zIndex: -1 }}
-          whileInView={{ opacity: 1, zIndex: 999 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
         >
           <motion.div className="contact__header">
             <motion.p
               className="title"
               variants={variants}
-              initial={{ opacity: 0, zIndex: -1 }}
-              whileInView={{ opacity: 1, zIndex: 11 }}
-              transition={{ delay: 4, duration: 1 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 4 }}
             >
               Get in touch
             </motion.p>
@@ -152,7 +152,6 @@ const Contact = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 4, duration: 1 }}
             variants={variants}
-            animate="animate"
           >
             <label>
               <span className="label-text">Your Name</span>

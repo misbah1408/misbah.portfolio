@@ -92,6 +92,8 @@ $black-100: #000;
 
     .subtitle {
         font-size: 0.875rem;
+        width: 100%;
+        background: #0c0c1d;
         color: $secondary;
         text-transform: uppercase;
         letter-spacing: 0.1em;
@@ -103,7 +105,7 @@ $black-100: #000;
 }
 
 .contact__form {
-    margin-top: 0.75rem;
+    padding-top: 0.75rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
