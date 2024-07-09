@@ -16,7 +16,7 @@ const Single = ({ item }) => {
     <section ref={ref}>
       <div className="container">
         <div className="wrapper">
-          <motion.div className="imgContainer" style={{ y: y1 }}>
+          <motion.div className="imgContainer" style={{ y: y1 , height:"40%", width:"100%"}}>
             <img src={img} alt={title} />
           </motion.div>
           <motion.div className="textContainer" style={{ y }}>

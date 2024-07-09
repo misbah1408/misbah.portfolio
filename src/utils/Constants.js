@@ -1,4 +1,7 @@
 import yen from '../assets/yen.png'
+import gpt from '../assets/netflix.jpg'
+import yt from '../assets/yt.jpg'
+import swiggy from '../assets/swiggy.jpg'
 export const projectList = [
   {
     id: 1,
@@ -12,24 +15,24 @@ export const projectList = [
     id: 2,
     title: "Movies GPT",
     description:
-      "This project is a movies recommendation web application which acts like a search engine that gives a list of movies according to user input.",
-    img: yen,
+      "Movies-GPT is a movie recommendation website that provides movie suggestions based on user input using the Google Gemini API. This project is built with React for the frontend and styled with Tailwind CSS. It acts like a search engine, offering a list of movies according to user preferences. The combination of these technologies ensures a responsive and user-friendly experience.",
+    img: gpt,
     link:"https://github.com/misbah1408/movies-GPT"
   },
   {
     id: 3,
     title: "YouTube Clone",
     description:
-      "This project is a YouTube clone using React and Redux with Google's API.",
-    img: yen,
+      "YouTube Clone is a video-consuming website that replicates the core features of the original YouTube platform. This frontend project is built using React and styled with Tailwind CSS. It utilizes Google's API to fetch and display video content seamlessly. The project delivers a user-friendly interface for browsing, searching, and watching videos.",
+    img: yt,
     link:"https://github.com/misbah1408/Youtube-clone"
   },
   {
     id: 4,
     title: "Swiggy Clone",
     description:
-      "This project is a Swiggy clone food delivering web application using Swiggy's own app.",
-    img: yen,
+      "Swiggy Clone is a food delivery website that mimics the functionality of the original Swiggy app. This frontend project is built using Parcel, React, and plain CSS for a seamless user experience. It integrates Swiggy's own API to fetch real-time data and provide accurate delivery information. The project showcases a responsive design and efficient food ordering process.",
+    img: swiggy,
     link:"https://github.com/misbah1408/swiggyWithOriginalApi"
   },
 ];
