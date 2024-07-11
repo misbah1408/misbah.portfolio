@@ -1,4 +1,4 @@
-import yen from '../assets/yen.png'
+import yen from '../assets/yen.jpg'
 import gpt from '../assets/netflix.jpg'
 import yt from '../assets/yt.jpg'
 import swiggy from '../assets/swiggy.jpg'
