@@ -9,7 +9,8 @@ export const projectList = [
     description:
       "This project is a MERN stack application designed to facilitate food ordering for students and staff. It provides features for adding items to the cart, checkout, viewing order details, checking order status, and an admin panel for CRUD operations and updating order delivery status. Additionally, the admin panel includes features for editing existing food items and creating new ones.",
     img: yen,
-    link:"https://github.com/misbah1408/YenCafe"
+    link:"https://github.com/misbah1408/YenCafe",
+    deployLink:""
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ export const projectList = [
     description:
       "Movies-GPT is a movie recommendation website that provides movie suggestions based on user input using the Google Gemini API. This project is built with React for the frontend and styled with Tailwind CSS. It acts like a search engine, offering a list of movies according to user preferences. The combination of these technologies ensures a responsive and user-friendly experience.",
     img: gpt,
-    link:"https://github.com/misbah1408/movies-GPT"
+    link:"https://github.com/misbah1408/movies-GPT",
+    deployLink:"https://moviesgpt-chi.vercel.app/browse"
   },
   {
     id: 3,
@@ -25,7 +27,8 @@ export const projectList = [
     description:
       "YouTube Clone is a video-consuming website that replicates the core features of the original YouTube platform. This frontend project is built using React and styled with Tailwind CSS. It utilizes Google's API to fetch and display video content seamlessly. The project delivers a user-friendly interface for browsing, searching, and watching videos.",
     img: yt,
-    link:"https://github.com/misbah1408/Youtube-clone"
+    link:"https://github.com/misbah1408/Youtube-clone",
+    deployLink:""
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ export const projectList = [
     description:
       "Swiggy Clone is a food delivery website that mimics the functionality of the original Swiggy app. This frontend project is built using Parcel, React, and plain CSS for a seamless user experience. It integrates Swiggy's own API to fetch real-time data and provide accurate delivery information. The project showcases a responsive design and efficient food ordering process.",
     img: swiggy,
-    link:"https://github.com/misbah1408/swiggyWithOriginalApi"
+    link:"https://github.com/misbah1408/swiggyWithOriginalApi",
+    deployLink:""
   },
 ];
 

@@ -5,7 +5,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const Single = ({ item }) => {
   const ref = useRef();
-  const { title, img, description, link } = item || "default";
+  const { title, img, description, link, deployLink } = item || "default";
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -16,18 +16,29 @@ const Single = ({ item }) => {
     <section ref={ref}>
       <div className="container">
         <div className="wrapper">
-          <motion.div className="imgContainer" style={{ y: y1 , height:"40%", width:"100%"}}>
+          <motion.div
+            className="imgContainer"
+            style={{ y: y1, height: "40%", width: "100%" }}
+          >
             <img src={img} alt={title} />
           </motion.div>
           <motion.div className="textContainer" style={{ y }}>
             <h2>{title}</h2>
             <p>{description}</p>
-            <a href={link} rel="noreferrer">
-              <button>
-                <i className="fa-solid fa-arrow-up-right-from-square text-[15px]"></i>
-                <i className="fa-brands fa-github"></i>
-              </button>
-            </a>
+            <div className="w-full flex gap-5">
+              <a href={link} rel="noreferrer">
+                <button>
+                  <i className="fa-solid fa-arrow-up-right-from-square text-[15px]"></i>
+                  <i className="fa-brands fa-github text-[20px]"></i>
+                </button>
+              </a>
+              {deployLink && <a href={deployLink} rel="noreferrer">
+                <button>
+                  <i class="fa-solid fa-link text-[15px]"></i>
+                  <span className="text-[15px] font-semibold">Live</span>
+                </button>
+              </a>}
+            </div>
           </motion.div>
         </div>
       </div>
@@ -51,9 +62,9 @@ function Project() {
         <h1>Featured Works</h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
-        {projectList.map((item) => (
-          <Single item={item} key={item.id} />
-        ))}
+      {projectList.map((item) => (
+        <Single item={item} key={item.id} />
+      ))}
     </div>
   );
 }

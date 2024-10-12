@@ -13,7 +13,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
+  const [canvasError, setCanvasError] = useState(false);
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -89,7 +89,18 @@ const Contact = () => {
       whileInView="animate"
     >
       <motion.div variants={variants} className="contact__canvas-container">
-        <EarthCanvas />
+        {!canvasError ? (
+          <EarthCanvas onError={() => setCanvasError(true)} />
+        ) : (
+          <div className="canvas-error">
+            <p className="text-red-500 text-center">
+              Oops! Something went wrong while loading the Earth visualization.
+            </p>
+            <p className="text-gray-400 text-center">
+              Please try refreshing the page or come back later.
+            </p>
+          </div>
+        )}
       </motion.div>
 
       <motion.div variants={variants} className="contact__form-container">

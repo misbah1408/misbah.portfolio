@@ -1,6 +1,6 @@
 @import "../../app.scss";
 $primary: #151030;
-$secondary: #888; 
+$secondary: #888;
 $white: #fff;
 $black-100: #000;
 
@@ -14,7 +14,8 @@ $black-100: #000;
     @media (min-width: 1280px) {
         flex-direction: row;
     }
-    @include mobile{
+
+    @include mobile {
         flex-direction: column;
         justify-content: center;
         align-self: center;
@@ -27,9 +28,9 @@ $black-100: #000;
     flex: 1;
     height: 350px;
 
-    @include mobile{
+    @include mobile {
         height: 100%;
-        width: 100%; 
+        width: 100%;
         margin-top: -30px;
         overflow: hidden;
     }
@@ -48,13 +49,15 @@ $black-100: #000;
     width: 60%;
     user-select: none;
     position: relative;
-    @include mobile{
+
+    @include mobile {
         margin-bottom: 25px;
         gap: 1rem;
         width: 100%;
         transition: none !important;
     }
-    .contactSvg{
+
+    .contactSvg {
         height: 100%;
         width: 100%;
         position: absolute;
@@ -62,13 +65,20 @@ $black-100: #000;
         margin-top: 10%;
         stroke: orange;
         z-index: -1;
-        @include mobile{
-            height: 50%;
-            width: 50%;
-            left: 0;
-            svg{
-                height: 500px;
-                width: 500px;
+
+        @include mobile {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
@@ -110,7 +120,8 @@ $black-100: #000;
     flex-direction: column;
     gap: 2rem;
     background: #0c0c1d;
-    @include mobile{
+
+    @include mobile {
         gap: 1rem;
         width: 100%;
     }
@@ -139,8 +150,9 @@ $black-100: #000;
             }
 
         }
-        textarea{
-            @include mobile{
+
+        textarea {
+            @include mobile {
                 height: 5rem;
             }
         }
