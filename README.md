@@ -3,7 +3,7 @@
   <a href="https://misbah-portfolio-nine.vercel.app/" target="_blank">Misbah.dev</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="./Tumbnail.png" />
+  <a href="https://misbah-portfolio-nine.vercel.app/" target="_blank"><img alt="Demo" src="./Tumbnail.png" /></a>
 </div>
 
 <br/>
