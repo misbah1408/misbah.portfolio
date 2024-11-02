@@ -10,7 +10,7 @@ export const projectList = [
       "This project is a MERN stack application designed to facilitate food ordering for students and staff. It provides features for adding items to the cart, checkout, viewing order details, checking order status, and an admin panel for CRUD operations and updating order delivery status. Additionally, the admin panel includes features for editing existing food items and creating new ones.",
     img: yen,
     link:"https://github.com/misbah1408/YenCafe",
-    deployLink:""
+    deployLink:"https://yen-cafe.vercel.app"
   },
   {
     id: 2,
