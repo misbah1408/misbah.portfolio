@@ -24,7 +24,7 @@ export default function () {
           <a href="https://x.com/misbah0814">
             <i className="fa-brands fa-twitter hover:text-[#1DA1F2]"></i>
           </a>
-          <a href="https://www.instagram.com/m1sba.h_/">
+          <a href="https://www.instagram.com/misba.hhh_/">
             <i className="fa-brands fa-instagram "></i>
           </a>
           <a href="https://drive.google.com/file/d/1vmKdR1Vy64YUt5dXKjmpk-H0Yu553p-h/view?usp=drive_link">
