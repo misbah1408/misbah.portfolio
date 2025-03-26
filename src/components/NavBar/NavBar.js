@@ -27,7 +27,7 @@ export default function () {
           <a href="https://www.instagram.com/misba.hhh_/">
             <i className="fa-brands fa-instagram "></i>
           </a>
-          <a href="https://drive.google.com/file/d/1dijoV6iiBf50aZZffExzTHgDbECY5lwq/view?usp=drive_link">
+          <a href="https://drive.google.com/file/d/1MyMyZVB9eB2mRz3T41QKpODa8vUVXOoD/view?usp=drive_link">
             <img
               width="20"
               height="20"
