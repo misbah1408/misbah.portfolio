@@ -1,0 +1,44 @@
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+
+  .wrapper {
+    max-width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    @include mobile {
+      justify-content: flex-end;
+    }
+
+    span {
+      font-weight: bold;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .socials {
+      font-size: 20px;
+      display: flex;
+      gap: 20px;
+
+      .fa-instagram {
+        display: inline-block;
+        color: #ffffff; /* Default color */
+        transition: all 0.3s ease; /* Ensure smooth transition */
+      }
+
+      .fa-instagram:hover {
+        background: linear-gradient(90deg, #f9ce34, #ee2a7b, #6228d7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import "../../app.scss";
+
+.parallax {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+
+    h1 {
+        font-size: 80px;
+        z-index: 2;
+        @include mobile {
+            font-size: 40px;
+            text-align: center;
+            z-index: 4;
+        }
+    }
+
+    .mountains {
+        background-image: url('../../assets/mountains.png');
+        background-size: cover;
+        background-position: bottom;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+
+        @include mobile {
+            margin-bottom: -100px;
+        }
+    }
+
+    .planets {
+        background-size: cover;
+        background-position: bottom;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        @include mobile{
+            width: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 150px;
+        }
+    }
+
+    .stars {
+        background-image: url('../../assets/stars.png');
+        background-size: cover;
+        background-position: bottom;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+
+        @include mobile {
+            background-image: url('../../assets/stars.png');
+            background-size: cover;
+            background-position: bottom;
+            height: 100%;
+            width: 100%;
+            transform: none !important;
+        }
+    }
+
+}
