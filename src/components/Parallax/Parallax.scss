@@ -1,4 +1,4 @@
-@import "../../app.scss";
+@use "../../app.scss";
 
 .parallax {
     height: 100%;
@@ -12,7 +12,7 @@
     h1 {
         font-size: 80px;
         z-index: 2;
-        @include mobile {
+        @include app.mobile {
             font-size: 40px;
             text-align: center;
             z-index: 4;
@@ -28,7 +28,7 @@
         position: absolute;
         z-index: 3;
 
-        @include mobile {
+        @include app.mobile {
             margin-bottom: -100px;
         }
     }
@@ -40,7 +40,7 @@
         width: 100%;
         position: absolute;
         z-index: 2;
-        @include mobile{
+        @include app.mobile{
             width: 100%;
             background-size: contain;
             background-repeat: no-repeat;
@@ -57,7 +57,7 @@
         position: absolute;
         z-index: 1;
 
-        @include mobile {
+        @include app.mobile {
             background-image: url('../../assets/stars.png');
             background-size: cover;
             background-position: bottom;

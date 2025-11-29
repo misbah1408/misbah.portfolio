@@ -1,4 +1,4 @@
-@import "../../app.scss";
+@use "../../app.scss";
 .cursor {
     position: fixed;
     top: 0;
@@ -11,7 +11,7 @@
     transform: translate(-50%, -50%);
     z-index: 1000;
 
-    @include mobile{
+    @include app.mobile{
       display: none;
     }
   }

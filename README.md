@@ -3,7 +3,7 @@
   <a href="https://misbah-portfolio-nine.vercel.app/" target="_blank">Misbah.dev</a>
 </h2>
 <div align="center">
-  <a href="https://misbah-portfolio-nine.vercel.app/" target="_blank"><img alt="Demo" src="./Tumbnail.png" /></a>
+  <a href="https://misbah-portfolio-nine.vercel.app/" target="_blank"><img alt="Demo" src="./Thumbnail.png" /></a>
 </div>
 
 <br/>
@@ -25,7 +25,7 @@ My personal portfolio <a href="https://misbah-portfolio-nine.vercel.app/" target
 
 This project was built using these technologies.
 
-- React.js
+- React.js(Vite)
 - Tailwind
 - Three.js
 - SCSS
@@ -51,7 +51,7 @@ Clone down this repository. You will need `node.js` and `git` installed globally
 2. In the project directory, you can run: `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 The page will reload if you make edits.
 
 ## Usage Instructions

@@ -1,4 +1,4 @@
-@import "../../app.scss";
+@use "../../app.scss";
 $primary: #151030;
 $secondary: #888;
 $white: #fff;
@@ -15,7 +15,7 @@ $black-100: #000;
         flex-direction: row;
     }
 
-    @include mobile {
+    @include app.mobile {
         flex-direction: column;
         justify-content: center;
         align-self: center;
@@ -28,7 +28,7 @@ $black-100: #000;
     flex: 1;
     height: 350px;
 
-    @include mobile {
+    @include app.mobile {
         height: 100%;
         width: 100%;
         margin-top: -30px;
@@ -49,8 +49,8 @@ $black-100: #000;
     width: 60%;
     user-select: none;
     position: relative;
-
-    @include mobile {
+    z-index: 100;
+    @include app.mobile {
         margin-bottom: 25px;
         gap: 1rem;
         width: 100%;
@@ -66,7 +66,7 @@ $black-100: #000;
         stroke: orange;
         z-index: -1;
 
-        @include mobile {
+        @include app.mobile {
             height: 100%;
             width: 100%;
             display: flex;
@@ -121,7 +121,7 @@ $black-100: #000;
     gap: 2rem;
     background: #0c0c1d;
 
-    @include mobile {
+    @include app.mobile {
         gap: 1rem;
         width: 100%;
     }
@@ -152,7 +152,7 @@ $black-100: #000;
         }
 
         textarea {
-            @include mobile {
+            @include app.mobile {
                 height: 5rem;
             }
         }
