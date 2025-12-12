@@ -1,70 +1,81 @@
-@use "../../app.scss";
+@use "../../app/styles.lazy.scss" as m;;
 
 .parallax {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+
+//   @include m.mobile {
+//     display: none;
+//   }
+
+  h1 {
+    font-size: 80px;
+    z-index: 2;
+    @include m.mobile {
+      font-size: 40px;
+      text-align: center;
+      z-index: 4;
+    }
+  }
+
+  .mountains {
+    background-image: url("/assets/mountains.webp");
+    background-size: cover;
+    background-position: bottom;
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden !important;
-    overflow-y: hidden !important;
+    position: absolute;
+    z-index: 3;
 
-    h1 {
-        font-size: 80px;
-        z-index: 2;
-        @include app.mobile {
-            font-size: 40px;
-            text-align: center;
-            z-index: 4;
-        }
+    @include m.mobile {
+      margin-bottom: -100px;
     }
+  }
 
-    .mountains {
-        background-image: url('../../assets/mountains.png');
-        background-size: cover;
-        background-position: bottom;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: 3;
-
-        @include app.mobile {
-            margin-bottom: -100px;
-        }
+  .planets {
+    background-size: cover;
+    background-position: bottom;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    @include m.mobile {
+      width: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-bottom: 150px;
     }
+  }
 
-    .planets {
-        background-size: cover;
-        background-position: bottom;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: 2;
-        @include app.mobile{
-            width: 100%;
-            background-size: contain;
-            background-repeat: no-repeat;
-            margin-bottom: 150px;
-        }
+  .stars {
+    background-image: url("/assets/stars.png");
+    background-size: cover;
+    background-position: bottom;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+
+    @include m.mobile {
+      background-image: url("/assets/stars.png");
+      background-size: cover;
+      background-position: bottom;
+      height: 100%;
+      width: 100%;
+      transform: none !important;
     }
-
-    .stars {
-        background-image: url('../../assets/stars.png');
-        background-size: cover;
-        background-position: bottom;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: 1;
-
-        @include app.mobile {
-            background-image: url('../../assets/stars.png');
-            background-size: cover;
-            background-position: bottom;
-            height: 100%;
-            width: 100%;
-            transform: none !important;
-        }
+    @include m.tablet {
+      background-image: url("/assets/stars.png");
+      background-size: cover;
+      background-position: bottom;
+      height: 100%;
+      width: 100%;
+      transform: none !important;
     }
-
+  }
 }

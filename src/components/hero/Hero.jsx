@@ -1,9 +1,18 @@
-import React from "react";
+"use client";
+
+import dynamic from "next/dynamic";
+import React, { useEffect, useState } from "react";
 import "./Hero.scss";
-import scrollPng from "../../assets/scroll.png";
 import { motion } from "framer-motion";
-import profile from '../../assets/profile1.png'
-import {useTypewriter, Cursor} from 'react-simple-typewriter'
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+import Image from "next/image";
+
+const LazyTypeWriter = dynamic(() => import("./TypeWriterText"), {
+  ssr: false,
+  loading: () => "Developer", 
+});
+const MotionImage = motion.create(Image);
+
 const textVariants = {
   initial: {
     x: -500,
@@ -18,14 +27,12 @@ const textVariants = {
     },
   },
   scrollPngAnimation: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
+    opacity: [0, 1, 0],
+    y: [5, 0, 5],
+    transition: { duration: 1.3, repeat: Infinity },
   },
 };
+
 const sliderVariants = {
   initial: {
     x: 0,
@@ -35,17 +42,23 @@ const sliderVariants = {
     transition: {
       repeat: Infinity,
       repeatType: "loop",
-      duration : 20,
-    }
-  }
-  
-}
+      duration: 20,
+    },
+  },
+};
 function Hero() {
-  const [text] = useTypewriter({
-    words: ['Full Stack Developer', 'FrontEnd Developer', 'BackEnd Developer'],
-      loop: true,
-      delaySpeed: 2000,
-      })
+  const [startTyping, setStartTyping] = React.useState(false);
+
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    requestIdleCallback(() => setIsReady(true));
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => setStartTyping(true), 700);
+  }, []);
+
   return (
     <div className="hero">
       <div className="wrapper">
@@ -53,40 +66,56 @@ function Hero() {
           className="textContainer"
           variants={textVariants}
           initial="initial"
-          animate="animate"
+          animate={isReady ? "animate" : false} // animate only after load
         >
           <motion.h2 variants={textVariants}>Mohammed Misbah</motion.h2>
           <motion.h1 variants={textVariants}>
-            I'm a 
-            <motion.p >{text}<Cursor/></motion.p>
+            {`I'm a`}
+            {startTyping && (
+              <motion.p>
+                <LazyTypeWriter/>
+                {/* <Cursor /> */}
+              </motion.p>
+            )}
           </motion.h1>
           <motion.div className="buttons" variants={textVariants}>
-            <motion.button variants={textVariants}>
-              <a href="#Projects" className="btn">
-                See my works
-              </a>
-            </motion.button>
-            <motion.button variants={textVariants}>
-              <a href="#Contact" className="btn">
-                Contact Me
-              </a>
-            </motion.button>
+            <motion.a href="#Projects" className="btn" variants={textVariants}>
+              See my works
+            </motion.a>
+            <motion.a href="#Contact" className="btn" variants={textVariants}>
+              Contact Me
+            </motion.a>
           </motion.div>
-          <motion.img
-            src={scrollPng}
-            alt="scrollPngAnimation"
-            variants={textVariants}
-            animate="scrollPngAnimation"
-          />
+          {isReady && (
+            <MotionImage
+              height={40}
+              width={40}
+              src={"/assets/scroll.webp"}
+              alt="scroll"
+              variants={textVariants}
+              animate="scrollPngAnimation"
+              priority
+            />
+          )}
         </motion.div>
       </div>
-      <motion.div className="slidingText" variants={sliderVariants} initial="initial" animate="animate">
+      <motion.div
+        className="slidingText"
+        variants={sliderVariants}
+        initial="initial"
+        animate={isReady ? "animate" : false}
+      >
         Frontend Backend UI/UX
       </motion.div>
       <div className="imageContainer">
-        <img
-          src={profile}
+        <Image
+          src="/assets/profile1.webp"
           alt="hero"
+          width={500}
+          height={500}
+          priority
+          quality={55}
+          sizes="(max-width: 768px) 280px, (max-width: 1024px) 400px, 500px"
         />
       </div>
     </div>

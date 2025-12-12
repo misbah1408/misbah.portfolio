@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import "./Services.scss";
-import servicesImg from "../../assets/services.png";
+import Image from "next/image";
+
 const cardVariants = {
   offscreen: { y: 300, opacity: 0 },
   onscreen: {
@@ -33,14 +36,24 @@ function Services() {
         transition={{ delay: 0.5, duration: 1 }}
       >
         <div className="title">
-          <img src={servicesImg} alt="" />
+          <Image
+            src="/assets/services.webp"
+            alt="image"
+            width={200}
+            height={80}
+            quality={55}
+            loading="lazy"
+            sizes="200px"
+          />
+
           <h1>
-            <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
+            <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business
+            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
+            Business
           </h1>
           <button>What We Do?</button>
         </div>
@@ -58,7 +71,7 @@ function Services() {
             initial="offscreen"
             whileInView="onscreen"
           >
-            <h3>{role}</h3>
+            <h2>{role}</h2>
             <p>
               {role === "Frontend Developer" &&
                 "Frontend development involves creating the user interface and user experience of web applications using HTML, CSS, and JavaScript. HTML structures the content, CSS styles it, and JavaScript adds interactivity. React, a popular JavaScript library, enhances development by allowing developers to build reusable components and manage application state efficiently. React's virtual DOM improves performance by minimizing direct updates to the actual DOM. Together, these technologies create dynamic, responsive, and visually appealing web applications, providing users with seamless and engaging experiences."}

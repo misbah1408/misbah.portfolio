@@ -1,4 +1,4 @@
-@use "../../app.scss";
+@use "../../app/styles.lazy.scss" as m;
 
 .sidebar{
     display: flex;
@@ -15,7 +15,10 @@
         bottom: 0;
         width: 330px;
         background: white;
-        @include app.mobile{
+        @include m.mobile{
+            width: 60vw;
+        }
+        @include m.tablet{
             width: 60vw;
         }
         .links{
@@ -31,7 +34,7 @@
             a{
                 color: black;
                 font-size: 30px;
-                @include app.mobile{
+                @include m.mobile{
                     font-size: 20px;
                 }
             }

@@ -1,18 +1,20 @@
-@use "../../app.scss";
+@use "../../app/styles.lazy.scss" as m;;
 .cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #fefdfd;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fefdfd;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 
-    @include app.mobile{
-      display: none;
-    }
+  @include m.mobile {
+    display: none;
   }
-  
+  @include m.tablet {
+    display: none;
+  }
+}

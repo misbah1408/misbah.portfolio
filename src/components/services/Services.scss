@@ -1,4 +1,5 @@
-@use "../../app.scss";
+@use "../../app/styles.lazy.scss" as m;;
+
 .services {
     height: 100%;
     width: 100%;
@@ -11,7 +12,7 @@
     position: relative;
     z-index: 3;
     cursor: default;
-    @include app.mobile{
+    @include m.mobile{
         overflow-x: hidden;
         overflow-y: hidden;
     }
@@ -21,7 +22,7 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        @include app.mobile{
+        @include m.mobile{
             align-self: flex-end;
             text-align: start;
             flex-direction: column;
@@ -32,7 +33,7 @@
             font-weight: 400;
             color: gray;
             text-align: right;
-            @include app.mobile{
+            @include m.mobile{
                 text-align: right;
                 font-size: 13px;
             }
@@ -42,10 +43,10 @@
             width: 500px;
             border: none;
             border-top: 0.2px solid gray;
-            @include app.mobile{
+            @include m.mobile{
                 width: 50%;
                 margin-top: -35px;
-                margin-left: 500px;
+                margin-left: 400px;
             }
         }
     }
@@ -56,7 +57,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: 20px;
-        @include app.mobile{
+        @include m.mobile{
             width: 100%;
             margin-top: -100px;
         }
@@ -64,7 +65,7 @@
             display: flex;
             align-items: center;
             gap: 40px;
-            @include app.mobile{
+            @include m.mobile{
                 flex-direction: column;
                 text-align: center;
                 gap: 10px;
@@ -74,11 +75,12 @@
                 height: 80px;
                 object-fit: cover;
                 border-radius: 50px;
-                @include app.mobile{
+                @include m.mobile{
                     width: 160px;
                     height: 70px;
                 }
             }
+            
             h1{
                 font-size: 48px;
                 font-weight: 100;
@@ -91,7 +93,7 @@
                 background-color: orange;
                 color: #0c0c1d;
                 font-weight: 600;
-                @include app.mobile{
+                @include m.mobile{
                     width: 160px;
                     height: 70px;
                     font-size: 14px;
@@ -108,7 +110,7 @@
         flex-wrap: wrap;
         overflow-y: hidden;
         overflow-x: hidden;
-        @include app.mobile{
+        @include m.mobile{
             width: 100%;
             display: flex;
             justify-items: center;
@@ -124,23 +126,23 @@
             width: 350px;
             text-align: left;
             transition: transform 0.2s;
-            @include app.mobile{
+            @include m.mobile{
                 width: 100%;
                 transform: none !important;
             }
 
             &:hover {
                 transform: translateY(-10px);
-                @include app.mobile{
+                @include m.mobile{
                     transform: none;
                 }
             }
 
-            h3 {
+            h2 {
                 margin-top: 0;
                 font-size: 1.25rem;
                 color: #0073e6;
-                @include app.mobile{
+                @include m.mobile{
                     text-align: center;
                 }
             }
@@ -148,7 +150,7 @@
             p {
                 font-size: 0.8rem;
                 color: #666;
-                @include app.mobile{
+                @include m.mobile{
                     display: none;
                 }
             }

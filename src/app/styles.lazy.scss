@@ -1,0 +1,42 @@
+@mixin mobile {
+  @media (max-width: 650px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 651px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 1025px) and (max-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1367px) {
+    @content;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a33;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5a5a9e;
+  border-radius: 12px;
+  border: 3px solid #1a1a33;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7878d4;
+}

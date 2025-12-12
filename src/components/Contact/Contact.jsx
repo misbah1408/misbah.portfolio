@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
@@ -107,23 +109,19 @@ const Contact = () => {
         <motion.div
           className="contactSvg"
           initial={{ opacity: 1 }}
-          whileInView={{opacity:0}}
+          whileInView={{ opacity: 0 }}
           transition={{
             duration: 1,
-            delay:3
+            delay: 3,
           }}
         >
-          <svg
-            height="600px"
-            width="600px"
-            viewBox="0 0 42.666 42.666"
-          >
+          <svg height="600px" width="600px" viewBox="0 0 42.666 42.666">
             <motion.path
               strokeWidth={0.2}
               fill="none"
-              initial={{pathLength:0}}
-              animate={isInView && {pathLength:1}}
-              transition={{duration:7}}
+              initial={{ pathLength: 0 }}
+              animate={isInView && { pathLength: 1 }}
+              transition={{ duration: 7 }}
               d={d}
             />
           </svg>
@@ -197,32 +195,31 @@ const Contact = () => {
 
             <button type="submit">{loading ? "Sending..." : "Send"}</button>
           </motion.form>
-        </motion.div>
-
-        <motion.div
-          className="contact__options"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 4, duration: 1 }}
-        >
-          <article className="contact__option">
-            <i className="fa-solid fa-envelope pr-2"></i>
-            <a
-              href="mailto:misbahmohammed00008@gmail.com"
-              className="blue-text-gradient"
-            >
-              misbahmohammed00008@gmail.com
-            </a>
-          </article>
-          <article className="contact__option ">
-            <i className="fa-brands fa-whatsapp pr-2"></i>
-            <a
-              href="https://api.whatsapp.com/send/?phone=8296250057&text&app_absent=0&lang=en"
-              className="blue-text-gradient"
-            >
-              +91 8296250057
-            </a>
-          </article>
+          <motion.div
+            className="contact__options"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 4, duration: 1 }}
+          >
+            <article className="contact__option">
+              <i className="fa-solid fa-envelope pr-2"></i>
+              <a
+                href="mailto:misbahmohammed00008@gmail.com"
+                className="blue-text-gradient"
+              >
+                misbahmohammed00008@gmail.com
+              </a>
+            </article>
+            <article className="contact__option ">
+              <i className="fa-brands fa-whatsapp pr-2"></i>
+              <a
+                href="https://api.whatsapp.com/send/?phone=8296250057&text&app_absent=0&lang=en"
+                className="blue-text-gradient"
+              >
+                +91 8296250057
+              </a>
+            </article>
+          </motion.div>
         </motion.div>
       </motion.div>
     </motion.div>

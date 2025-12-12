@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import './Sidebar.scss'
@@ -9,7 +11,7 @@ export default function Sidebar() {
 
     const variants = {
         open: {
-            clipPath: "circle(1200px at 50px 50px)",
+            clipPath: "circle(1500px at 50px 50px)",
             transition: {
                 type: "spring",
                 stiffness: 20

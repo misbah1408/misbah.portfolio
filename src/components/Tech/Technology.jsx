@@ -1,3 +1,5 @@
+'use client'
+
 import BallCanvas from "../Canvas/BallCanvas";
 import "./Technology.scss";
 import { motion } from "framer-motion";
@@ -27,7 +29,7 @@ function Technology() {
   useEffect(() => {
     // Catch any potential errors related to rendering BallCanvas or other issues
     try {
-      // Custom logic or API calls could go here.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setHasError(false);
     } catch (error) {
       console.error("Error loading technologies:", error);

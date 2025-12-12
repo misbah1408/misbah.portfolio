@@ -25,7 +25,7 @@ My personal portfolio <a href="https://misbah-portfolio-nine.vercel.app/" target
 
 This project was built using these technologies.
 
-- React.js(Vite)
+- Next.js
 - Tailwind
 - Three.js
 - SCSS
@@ -48,10 +48,10 @@ Clone down this repository. You will need `node.js` and `git` installed globally
 
 1. Installation: `npm install`
 
-2. In the project directory, you can run: `npm start`
+2. In the project directory, you can run: `npm run dev`
 
 Runs the app in the development mode.\
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 The page will reload if you make edits.
 
 ## Usage Instructions

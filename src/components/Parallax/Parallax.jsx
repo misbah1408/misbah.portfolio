@@ -1,8 +1,8 @@
+'use client'
+
 import React, { useRef } from "react";
 import "./Parallax.scss";
 import { motion, useScroll, useTransform } from 'framer-motion';
-import planetPng from "../../assets/planets.png";
-import sunPng from "../../assets/sun.png";
 
 function Parallax({ type }) {
     const ref = useRef();
@@ -32,7 +32,7 @@ function Parallax({ type }) {
             </motion.h1>
             <motion.div className="mountains"></motion.div>
             <motion.div 
-                style={{ y: yBg, backgroundImage: `url(${type === "Services" ? planetPng : sunPng})` }} 
+                style={{ y: yBg, backgroundImage: `url(${type === "Services" ? '/assets/planets.png' : '/assets/sun.png'})` }} 
                 className="planets">
             </motion.div>
             <motion.div style={{ x: xStars }} className="stars"></motion.div>

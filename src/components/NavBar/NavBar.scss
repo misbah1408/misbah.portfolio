@@ -1,4 +1,4 @@
-@use "../../app.scss";
+@use "../../app/styles.lazy.scss" as m;
 
 .navbar {
   height: 100px;
@@ -11,14 +11,14 @@
     align-items: center;
     height: 100%;
 
-    @include app.mobile {
+    @include m.mobile {
       justify-content: flex-end;
     }
 
     span {
       font-weight: bold;
 
-      @include app.mobile {
+      @include m.mobile {
         display: none;
       }
     }
@@ -28,13 +28,12 @@
       display: flex;
       gap: 20px;
 
-      .fa-instagram {
-        display: inline-block;
-        color: #ffffff; /* Default color */
-        transition: all 0.3s ease; /* Ensure smooth transition */
+      .instagram-hover {
+        color: #d1d5db; /* default gray or whatever */
+        transition: 0.3s;
       }
 
-      .fa-instagram:hover {
+      .instagram-hover:hover {
         background: linear-gradient(90deg, #f9ce34, #ee2a7b, #6228d7);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
